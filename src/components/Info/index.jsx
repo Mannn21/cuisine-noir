@@ -21,8 +21,8 @@ const Info = () => {
 						Daftar Menu
 					</button>
 				</div>
-                <div className="w-full md:w-1/2 h-full flex flex-col justify-center items-center border border-color-black">
-                    <div className="md:w-3/4 w-full h-[300px] md:h-full p-3 object-cover object-center border border-color-gold">
+                <div className="w-full md:w-1/2 h-full flex flex-col justify-center items-center">
+                    <div className="md:w-3/4 w-full h-[300px] md:h-full p-3 object-cover object-center">
                         <img src={Spice} alt="spice" className="w-full h-full object-cover object-center"/>
                     </div>
                 </div>
