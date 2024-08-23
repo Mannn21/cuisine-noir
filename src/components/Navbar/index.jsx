@@ -2,8 +2,8 @@ import { navbarLists } from "../../datas/navbarLists.js";
 
 const Navbar = () => {
 	return (
-		<div className="w-full h-auto absolute top-4 left-0">
-			<div className="w-full h-full flex flex-row gap-5 md:gap-10 justify-center items-center">
+		<div className="w-full h-auto absolute top-4 left-0 px-4">
+			<div className="w-full h-full flex flex-row gap-3 md:gap-10 justify-center items-center">
 				{
 					navbarLists.map((data, index) => {
 						return (

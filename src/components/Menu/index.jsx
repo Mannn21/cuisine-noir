@@ -5,7 +5,7 @@ const Menu = () => {
 		<div className="w-full h-auto p-3">
 			<div className="w-full h-auto flex flex-col justify-center items-center gap-8">
 				<div className="w-full h-auto flex flex-col justify-start items-center">
-					<span className="text-base font-light text-center text-color-darkGrey tracking-wider">
+					<span className="text-sm md:text-base font-light text-center text-color-darkGrey tracking-wider">
 						SPICY AND TASTY
 					</span>
 					<h3 className="text-2xl md:text-4xl text-center font-bold text-color-black tracking-widest">
@@ -26,12 +26,12 @@ const Menu = () => {
 									key={index}
 									className="w-full h-auto px-4 py-2 flex flex-col justify-start items-start gap-2">
 									<div className="w-full h-auto flex flex-row justify-between px-2">
-										<span className="mr-2 text-base font-medium text-color-darkGrey tracking-wide">{list.title}</span>
+										<span className="mr-2 text-sm md:text-base font-medium text-color-darkGrey tracking-wide">{list.title}</span>
 										<p className="grow border border-dotted border-color-darkGrey my-4"></p>
-										<span className="shrink-0 ml-4 text-base font-medium text-color-darkGrey">Rp. {list.price}.000</span>
+										<span className="shrink-0 text-sm ml-4 md:text-base font-medium text-color-darkGrey">Rp. {list.price}.000</span>
 									</div>
 									<div className="w-full h-auto flex flex-row justify-between px-2">
-										<p className="text-sm font-light text-color-grey tracking-wider">{list.desc}</p>
+										<p className="text-xs font-light text-color-grey tracking-wider">{list.desc}</p>
 									</div>
 								</div>
 							);
