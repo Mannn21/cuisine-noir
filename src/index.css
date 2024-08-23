@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=New+Amsterdam&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body, html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logo {
+  font-family: "Allura", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.jumbotron-image {
+  transition: transform 4s ease-in-out;
+}
+
+.zoom-in {
+  transform: scale(1);
+}
+
+.zoom-out {
+  transform: scale(1.04);
+}
