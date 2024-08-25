@@ -6,8 +6,8 @@ import Footer from "./components/Footer";
 
 const App = () => {
 	return (
-		<div className="w-screen h-auto bg-color-gold">
-			<div className="w-full h-auto flex flex-col justify-center items-center gap-6">
+		<div className="w-screen h-auto overflow-hidden">
+			<div className="w-full h-auto flex flex-col justify-center items-center gap-6 overflow-hidden">
 				<Jumbotron />
 				<About />
 				<Info />
