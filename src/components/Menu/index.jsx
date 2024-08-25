@@ -6,12 +6,7 @@ const Menu = () => {
 	return (
 		<div className="w-full h-auto p-3">
 			<div className="w-full h-auto flex flex-col justify-center items-center gap-8">
-				<motion.div
-					variants={fadeIn("down", 0.2)}
-					initial="hidden"
-					whileInView={"show"}
-					viewport={{ once: false, amount: 0.7 }}
-					className="w-full h-auto flex flex-col justify-start items-center">
+				<div className="w-full h-auto flex flex-col justify-start items-center">
 					<span className="text-sm md:text-base font-light text-center text-color-darkGrey tracking-wider">
 						SPICY AND TASTY
 					</span>
@@ -24,13 +19,15 @@ const Menu = () => {
 						itaque repellat officiis suscipit veritatis sapiente deleniti ea
 						sint inventore quisquam delectus magni, vitae accusamus, nisi.
 					</p>
-				</motion.div>
+				</div>
 				<div className="w-full h-auto p-3">
 					<div className="w-full h-auto grid grid-cols-1 md:grid-cols-2 gap-4">
 						{menuLists?.map((list, index) => {
 							return (
 								<motion.div
-									variants={index % 2 === 0 ? fadeIn("right", 0.3) : fadeIn("left", 0.3)}
+									variants={
+										index % 2 === 0 ? fadeIn("right", 0.3) : fadeIn("left", 0.3)
+									}
 									initial="hidden"
 									whileInView={"show"}
 									viewport={{ once: false, amount: 0.7 }}
