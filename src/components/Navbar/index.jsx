@@ -40,24 +40,24 @@ const Navbar = () => {
 				<div className="container mx-auto flex justify-between items-center px-4 py-4 md:py-6">
 					{/* Logo */}
 					<div className="text-2xl font-bold">
-						<a
-							href="#"
-							className={isScrolled ? "text-color-black" : "text-color-white"}>
+						<button
+							onClick={() => scrollDesktop("home")}
+							className={isScrolled ? "text-color-black" : isOpen ? "text-color-black" : "text-color-white"}>
 							Cuisine Noir
-						</a>
+						</button>
 					</div>
 
 					{/* Menu Desktop */}
 					<div className="hidden md:flex space-x-6">
 						{navbarLists.map((item, index) => (
-							<a
+							<button
 								key={index}
 								onClick={() => scrollDesktop(item.target)}
 								className={`transition-colors ${
 									isScrolled ? "text-color-black" : "text-color-white"
 								} hover:text-color-gold cursor-pointer`}>
 								{item.title}
-							</a>
+							</button>
 						))}
 					</div>
 
@@ -99,22 +99,22 @@ const Navbar = () => {
 				<div className="container mx-auto flex justify-between items-center px-4 py-4 md:py-6">
 					{/* Logo */}
 					<div className="text-2xl font-bold">
-						<a href="#" className="text-color-black">
+						<button onClick={() => scrollDesktop("home")} className="text-color-black">
 							Cuisine Noir
-						</a>
+						</button>
 					</div>
 
 					{/* Menu Desktop */}
 					<div className="hidden md:flex space-x-6">
 						{navbarLists.map((item, index) => (
-							<a
+							<button
 								key={index}
 								onClick={() => scrollDesktop(item.target)}
 								className={`transition-colors ${
 									isScrolled ? "text-color-black" : "text-color-white"
 								} hover:text-color-gold cursor-pointer`}>
 								{item.title}
-							</a>
+							</button>
 						))}
 					</div>
 
@@ -133,7 +133,7 @@ const Navbar = () => {
 
 			{/* Mobile Menu */}
 			<motion.div
-				className={`fixed top-0 right-0 w-full h-1/2 bg-color-white flex flex-col items-center justify-center z-40 transition-transform ${
+				className={`fixed top-0 right-0 w-full h-2/5 bg-color-white z-40 transition-transform ${
 					isOpen ? "translate-x-0" : "translate-x-full"
 				}`}
 				initial={{ x: "100%" }}
@@ -144,17 +144,19 @@ const Navbar = () => {
 					damping: 20,
 					duration: 0.2,
 				}}>
-				{navbarLists.map((item, index) => (
-					<a
-						key={index}
-						className="text-base font-medium text-color-black mb-6 hover:text-color-gold cursor-pointer"
-						onClick={() => {
-							scrollMobile(item.target);
-							setIsOpen(false);
-						}}>
-						{item.title}
-					</a>
-				))}
+				<div className="w-full h-full flex flex-col items-center justify-center mt-14 bg-color-white">
+					{navbarLists.map((item, index) => (
+						<button
+							key={index}
+							className="text-base font-medium text-color-black mb-6 hover:text-color-gold cursor-pointer"
+							onClick={() => {
+								scrollMobile(item.target);
+								setIsOpen(false);
+							}}>
+							{item.title}
+						</button>
+					))}
+				</div>
 			</motion.div>
 		</>
 	);

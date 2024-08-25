@@ -14,6 +14,8 @@ export default {
           grey: "#6A6A6A",
           lightGrey: "#D3D3D3",
           gold: "#DAA520",
+          lightGold2: "#FFD700",
+          goldenRod: "#B8860B",
           lightGold: "#FBE7C6",
           silver: "#DCDCDC",
         }

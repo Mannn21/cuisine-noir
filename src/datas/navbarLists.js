@@ -1,18 +1,22 @@
 export const navbarLists = [
-    {
-        title: "HOME",
-        target: "home"
-    },
-    {
-        title: "ABOUT",
-        target: "about"
-    },
-    {
-        title: "INFO",
-        target: "info"
-    },
-    {
-        title: "MENU LIST",
-        target: "menu"
-    },
-]
+	{
+		title: "HOME",
+		target: "home",
+	},
+	{
+		title: "ABOUT",
+		target: "about",
+	},
+	{
+		title: "INFO",
+		target: "info",
+	},
+	{
+		title: "MENU LIST",
+		target: "menu",
+	},
+	{
+		title: "KONTAK",
+		target: "contact",
+	},
+];
