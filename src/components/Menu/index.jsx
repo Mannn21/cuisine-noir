@@ -30,7 +30,7 @@ const Menu = () => {
 									}
 									initial="hidden"
 									whileInView={"show"}
-									viewport={{ once: false, amount: 0.7 }}
+									viewport={{ once: true, amount: 0.7 }}
 									key={index}
 									className="w-full h-auto px-4 py-2 flex flex-col justify-start items-start gap-2">
 									<div className="w-full h-auto flex flex-row justify-between px-2">
