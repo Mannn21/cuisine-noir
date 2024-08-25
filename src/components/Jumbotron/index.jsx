@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Navbar from "../Navbar";
 import { jumbotronLists } from "../../datas/jumbotronLists.js";
+import { motion } from "framer-motion";
 import "../../index.css";
 
 const Jumbotron = () => {
@@ -15,7 +16,7 @@ const Jumbotron = () => {
 			setImageLoaded(false);
 			setCurrentIndex(prevIndex => (prevIndex + 1) % jumbotronLists.length);
 			setZoomIn(prevZoomIn => !prevZoomIn);
-		}, 3000);
+		}, 5000);
 
 		return () => clearInterval(interval);
 	}, []);
@@ -36,20 +37,50 @@ const Jumbotron = () => {
 				<Navbar />
 				{imageLoaded && (
 					<div className="w-full sm:w-2/3 px-3 text-center flex flex-col justify-center items-center">
-						<span className="text-base font-extralight text-color-white tracking-wider">
+						<motion.span
+							animate={{ y: [-50, 0], opacity: 1, scale: 1 }}
+							transition={{
+								duration: 0.5,
+								delay: 0,
+								ease: [0.2, 0.31, 1, 1],
+							}}
+							initial={{ opacity: 0 }}
+							className="text-base font-extralight text-color-white tracking-wider">
 							{currentJumbotron.slogan}
-						</span>
-						<h1 className="text-4xl md:text-6xl font-bold text-color-white tracking-widest">
+						</motion.span>
+						<motion.h1
+							animate={{ y: [-50, 0], opacity: 1, scale: 1 }}
+							transition={{
+								duration: 0.5,
+								delay: 0.8,
+								ease: [0.2, 0.31, 1, 1],
+							}}
+							initial={{ opacity: 0 }}
+							className="text-4xl md:text-6xl font-bold text-color-white tracking-widest">
 							{currentJumbotron.title}
-						</h1>
-						<p className="text-base md:text-lg font-light mt-2 text-color-white tracking-wider">
+						</motion.h1>
+						<motion.p
+							animate={{ y: [-50, 0], opacity: 1, scale: 1 }}
+							transition={{
+								duration: 0.5,
+								delay: 1.1,
+								ease: [0.2, 0.31, 1, 1],
+							}}
+							initial={{ opacity: 0 }}
+							className="text-base md:text-lg font-light mt-2 text-color-white tracking-wider">
 							{currentJumbotron.description}
-						</p>
-						<div className="w-full h-auto">
-							<button className="px-5 py-3 mt-5 text-sm md:text-base font-normal text-color-darkGrey bg-color-white tracking-widest hover:text-color-white hover:bg-color-gold transition-all duration-300 ease-in-out cursor-pointer shadow-md">
-								Daftar Menu
-							</button>
-						</div>
+						</motion.p>
+						<motion.button
+							animate={{ y: [-50, 0], opacity: 1, scale: 1 }}
+							transition={{
+								duration: 0.5,
+								delay: 1.4,
+								ease: [0.2, 0.31, 1, 1],
+							}}
+							initial={{ opacity: 0 }}
+							className="px-5 py-3 mt-5 text-sm md:text-base font-normal text-color-darkGrey bg-color-white tracking-widest hover:text-color-white hover:bg-color-gold cursor-pointer shadow-md">
+							Daftar Menu
+						</motion.button>
 					</div>
 				)}
 			</div>

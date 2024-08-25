@@ -1,6 +1,14 @@
+import { motion } from "framer-motion";
+import { fadeIn } from "../../utils/animation.js";
+
 const Description = () => {
 	return (
-		<div className="w-full md:w-3/4 h-auto px-6 md:px-12 py-2 flex flex-col justify-start items-center gap-3">
+		<motion.div
+			variants={fadeIn("up", 0.2)}
+			initial="hidden"
+			whileInView={"show"}
+			viewport={{ once: false, amount: 0.7 }}
+			className="w-full md:w-3/4 h-auto px-6 md:px-12 py-2 flex flex-col justify-start items-center gap-3">
 			<span className="text-sm md:text-base font-light text-center text-color-darkGrey tracking-wider">
 				SPICY AND TASTY
 			</span>
@@ -14,7 +22,7 @@ const Description = () => {
 				et nulla officia atque iusto necessitatibus suscipit assumenda pariatur
 				similique? delectus, repellat, quibusdam ipsam. Corrupti labore.
 			</p>
-		</div>
+		</motion.div>
 	);
 };
 
