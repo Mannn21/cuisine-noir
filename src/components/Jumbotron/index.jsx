@@ -24,7 +24,7 @@ const Jumbotron = () => {
 	const currentJumbotron = jumbotronLists[currentIndex];
 
 	return (
-		<div className="w-full min-h-[500px] md:h-screen overflow-hidden relative">
+		<div id="home" className="w-full min-h-[500px] md:h-screen overflow-hidden relative">
 			<img
 				src={currentJumbotron.image}
 				alt="Jumbotron"

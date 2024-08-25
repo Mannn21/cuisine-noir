@@ -2,7 +2,7 @@ import Spice from "../../assets/spice.png";
 
 const Info = () => {
 	return (
-		<div className="w-full h-auto md:h-[350px]">
+		<div id="info" className="w-full h-auto md:h-[350px]">
 			<div className="w-full h-full py-2 px-10 flex flex-col md:flex-row justify-center items-center gap-4 bg-color-silver">
 				<div
 					className="w-full md:w-1/2 h-full py-2 px-5 flex flex-col justify-center items-center md:items-start">

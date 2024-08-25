@@ -4,7 +4,7 @@ import { fadeIn } from "../../utils/animation.js";
 
 const Menu = () => {
 	return (
-		<div className="w-full h-auto p-3">
+		<div id="menu" className="w-full h-auto p-3">
 			<div className="w-full h-auto flex flex-col justify-center items-center gap-8">
 				<div className="w-full h-auto flex flex-col justify-start items-center">
 					<span className="text-sm md:text-base font-light text-center text-color-darkGrey tracking-wider">
