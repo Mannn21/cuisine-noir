@@ -130,7 +130,7 @@ const Contact = () => {
 				<div className="w-full h-auto flex flex-col justify-center items-center">
 					<input
 						type="submit"
-						value="send"
+						value="Kirim"
 						className="px-5 py-3 mt-5 text-base md:text-base font-normal text-color-white bg-color-black rounded-md tracking-widest hover:text-color-white hover:bg-color-goldenRod cursor-pointer shadow-md"
 					/>
 				</div>
